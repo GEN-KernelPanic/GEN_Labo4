@@ -9,6 +9,10 @@ public class Order {
         this.id = id;
     }
 
+    /**
+     * Just a small modification to see if travis works
+     * @return
+     */
     public int getOrderId() {
         return id;
     }
