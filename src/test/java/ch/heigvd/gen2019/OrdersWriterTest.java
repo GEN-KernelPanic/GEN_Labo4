@@ -1,3 +1,5 @@
+package ch.heigvd.gen2019;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,10 +14,10 @@ public class OrdersWriterTest {
         orders.AddOrder(order111);
     }
 
-    @Test
-    public void NoOrder() {
-        assertEquals("{\"orders\": []}", new OrdersWriter(new Orders()).getContents());
-    }
+        @Test
+        public void NoOrder() {
+            assertEquals("{\"orders\": []}", new OrdersWriter(new Orders()).getContents());
+        }
 
     @Test
     public void OneOrder() {
