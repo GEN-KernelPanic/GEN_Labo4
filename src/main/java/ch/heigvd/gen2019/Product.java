@@ -33,7 +33,7 @@ public class Product {
     }
 
     String getSizeFor() {
-        switch (getSize()) {
+        switch (size) {
             case 1:
                 return "XS";
             case 2:
@@ -67,21 +67,21 @@ public class Product {
     public String getContents() {
         StringBuffer sb = new StringBuffer("{\"code\": \"");
 
-        sb.append(getCode());
+        sb.append(code);
         sb.append("\", \"color\": \"");
         sb.append(getColor());
         sb.append("\", ");
 
-        if (getSize() != SIZE_NOT_APPLICABLE) {
+        if (size != SIZE_NOT_APPLICABLE) {
             sb.append("\"size\": \"");
             sb.append(getSizeFor());
             sb.append("\", ");
         }
 
         sb.append("\"price\": ");
-        sb.append(getPrice());
+        sb.append(price);
         sb.append(", \"currency\": \"");
-        sb.append(getCurrency());
+        sb.append(currency);
         return sb.append("\"}, ").toString();
     }
 }
