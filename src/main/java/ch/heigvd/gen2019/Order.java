@@ -27,14 +27,14 @@ public class Order {
         products.add(product);
     }
 
-    public String getOrderContents() {
+    public String getContents() {
         StringBuffer sb = new StringBuffer("{\"id\": ");
 
         sb.append(getOrderId());
         sb.append(", \"products\": [");
 
         for (int j = 0; j < getProductsCount(); j++) {
-            sb.append(getProduct(j).getProductContents());
+            sb.append(getProduct(j).getContents());
         }
 
         if (getProductsCount() > 0) {

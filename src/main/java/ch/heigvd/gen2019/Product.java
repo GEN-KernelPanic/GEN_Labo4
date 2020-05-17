@@ -64,7 +64,7 @@ public class Product {
         }
     }
 
-    public String getProductContents() {
+    public String getContents() {
         StringBuffer sb = new StringBuffer("{\"code\": \"");
 
         sb.append(getCode());
