@@ -21,11 +21,11 @@ public class Orders {
     public String getContents() {
         StringBuffer sb = new StringBuffer("{\"orders\": [");
 
-        for (int i = 0; i < getOrdersCount(); i++) {
-            sb.append(getOrder(i).getContents());
+        for (int i = 0; i < orders.size(); i++) {
+            sb.append(orders.get(i).getContents());
         }
 
-        if (getOrdersCount() > 0) {
+        if (orders.size() > 0) {
             sb.delete(sb.length() - 2, sb.length());
         }
 
