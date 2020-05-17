@@ -30,14 +30,14 @@ public class Order {
     public String getContents() {
         StringBuffer sb = new StringBuffer("{\"id\": ");
 
-        sb.append(getOrderId());
+        sb.append(id);
         sb.append(", \"products\": [");
 
-        for (int j = 0; j < getProductsCount(); j++) {
-            sb.append(getProduct(j).getContents());
+        for (int j = 0; j < products.size(); j++) {
+            sb.append(products.get(j).getContents());
         }
 
-        if (getProductsCount() > 0) {
+        if (products.size() > 0) {
             sb.delete(sb.length() - 2, sb.length());
         }
 
