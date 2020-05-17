@@ -27,7 +27,7 @@ public class Order {
         products.add(product);
     }
 
-    public void getOrderContents(StringBuffer sb, OrdersWriter ordersWriter) {
+    public void getOrderContents(StringBuffer sb) {
         sb.append("{");
         sb.append("\"id\": ");
         sb.append(getOrderId());
