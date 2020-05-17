@@ -10,14 +10,6 @@ public class Orders {
         orders.add(order);
     }
 
-    public int getOrdersCount() {
-        return orders.size();
-    }
-
-    public Order getOrder(int i) {
-        return orders.get(i);
-    }
-
     public String getContents() {
         StringBuffer sb = new StringBuffer("{\"orders\": [");
 
