@@ -64,12 +64,11 @@ public class Product {
         }
     }
 
-    public void getProductContents(StringBuffer sb) {
-        sb.append("{");
-        sb.append("\"code\": \"");
+    public String getProductContents() {
+        StringBuffer sb = new StringBuffer("{\"code\": \"");
+
         sb.append(getCode());
-        sb.append("\", ");
-        sb.append("\"color\": \"");
+        sb.append("\", \"color\": \"");
         sb.append(getColor());
         sb.append("\", ");
 
@@ -81,9 +80,8 @@ public class Product {
 
         sb.append("\"price\": ");
         sb.append(getPrice());
-        sb.append(", ");
-        sb.append("\"currency\": \"");
+        sb.append(", \"currency\": \"");
         sb.append(getCurrency());
-        sb.append("\"}, ");
+        return sb.append("\"}, ").toString();
     }
 }

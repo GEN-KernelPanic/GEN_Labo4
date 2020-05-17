@@ -32,9 +32,9 @@ public class Order {
 
         sb.append(getOrderId());
         sb.append(", \"products\": [");
-        
+
         for (int j = 0; j < getProductsCount(); j++) {
-            getProduct(j).getProductContents(sb);
+            sb.append(getProduct(j).getProductContents());
         }
 
         if (getProductsCount() > 0) {
