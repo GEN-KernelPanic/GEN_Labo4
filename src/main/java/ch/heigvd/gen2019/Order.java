@@ -27,12 +27,12 @@ public class Order {
         products.add(product);
     }
 
-    public void getOrderContents(StringBuffer sb) {
-        sb.append("{");
-        sb.append("\"id\": ");
+    public String getOrderContents() {
+        StringBuffer sb = new StringBuffer("{\"id\": ");
+
         sb.append(getOrderId());
-        sb.append(", ");
-        sb.append("\"products\": [");
+        sb.append(", \"products\": [");
+        
         for (int j = 0; j < getProductsCount(); j++) {
             getProduct(j).getProductContents(sb);
         }
@@ -41,7 +41,6 @@ public class Order {
             sb.delete(sb.length() - 2, sb.length());
         }
 
-        sb.append("]");
-        sb.append("}, ");
+        return sb.append("]}, ").toString();
     }
 }

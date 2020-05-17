@@ -22,7 +22,7 @@ public class Orders {
         StringBuffer sb = new StringBuffer("{\"orders\": [");
 
         for (int i = 0; i < getOrdersCount(); i++) {
-            getOrder(i).getOrderContents(sb);
+            sb.append(getOrder(i).getOrderContents());
         }
 
         if (getOrdersCount() > 0) {
