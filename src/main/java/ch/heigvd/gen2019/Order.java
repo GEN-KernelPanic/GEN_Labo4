@@ -34,7 +34,7 @@ public class Order {
         sb.append(", ");
         sb.append("\"products\": [");
         for (int j = 0; j < getProductsCount(); j++) {
-            ordersWriter.getProductContents(sb, getProduct(j));
+            getProduct(j).getProductContents(sb);
         }
 
         if (getProductsCount() > 0) {
