@@ -20,10 +20,6 @@ public class Product {
         return code;
     }
 
-    public int getColor() {
-        return color;
-    }
-
     public int getSize() {
         return size;
     }
@@ -52,6 +48,19 @@ public class Product {
                 return "XXL";
             default:
                 return "Invalid Size";
+        }
+    }
+
+    String getColor() {
+        switch (color) {
+            case 1:
+                return "blue";
+            case 2:
+                return "red";
+            case 3:
+                return "yellow";
+            default:
+                return "no color";
         }
     }
 }
