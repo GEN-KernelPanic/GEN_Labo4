@@ -16,22 +16,6 @@ public class Product {
         this.currency = currency;
     }
 
-    public String getCode() {
-        return code;
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public String getCurrency() {
-        return currency;
-    }
-
     String getSizeFor() {
         switch (size) {
             case 1:
